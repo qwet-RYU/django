@@ -1,0 +1,113 @@
+
+{% extends 'base.html' %}
+<!-- extends = memanggil file template, wajib paling atas -->
+{% load static %}
+{% block title %} Form {% endblock %}
+
+{% block content %} 
+<h1>FORM FEEDBACK</h1>
+        <h2 class="alter_color">Ulasan dan Rating</h2>
+        <hr />
+<div class="box">
+        <h3 class="section-title">Kontak dan Saran</h3>
+        <form action="https://httpbin.org/post">
+          <!-- input kolom sederhana (pendek) -->
+          <!-- tips shortcut: input : [type nya] -->
+          <div>
+            <label for="NamaLengkap">Nama Lengkap:</label>
+            <input
+              placeholder="(optional)"
+              type="text"
+              text="nama_lengkap"
+              id="NamaLengkap"
+            />
+            <!-- id untuk menghubungkan label dan input -->
+          </div>
+          <br /><br />
+          <div>
+            <label for="alamat_email">Alamat Email:</label>
+            <input
+              placeholder="@email.com"
+              type="email"
+              name="email"
+              id="alamat_email"
+            />
+          </div>
+
+          <br /><br />
+          <div>
+            <label for="rating">Rating:</label>
+            <input
+              placeholder="(1-10)"
+              type="number"
+              name="rating"
+              id="rating"
+              min="1"
+              max="10"
+              step="1"
+            />
+          </div>
+          <br /><br />
+          <div>
+            <div>
+              <label>Kelas:</label>
+            </div>
+            <div class="input_option">
+              <input type="radio" name="kelas" id="kelas1" />
+              <label for="kelas1">Kelas A</label>
+              <input type="radio" name="kelas" id="kelas2" />
+              <label for="kelas2">Kelas B</label>
+              <input type="radio" name="kelas" id="kelas3" />
+              <label for="kelas3">Kelas C</label>
+            </div>
+          </div>
+          <br />
+          <div>
+            <div>
+              <label>Suka atau Tidak pelajaran nya?</label>
+            </div>
+            <div class="input_option">
+              <input type="checkbox" name="minat1" id="Sangat suka" />
+              <label for="Sangat suka">Sangat suka</label>
+              <input type="checkbox" name="minat2" id="biasa aja" />
+              <label for="biasa aja">Biasa aja</label>
+              <input type="checkbox" name="minat3" id="Tidak suka" />
+              <label for="Tidak suka">Tidak suka</label>
+            </div>
+          </div>
+          <br /><br />
+          <div>
+            <!-- butuh option value -->
+            <label for="asal">Tipe Profil Digital</label>
+            <select name="asal_daerah" id="asal">
+              <option disabled selected>--Pilih Salah Satu--</option>
+              <option value="Wibu">Wibu</option>
+              <option value="Gamer">Gamer</option>
+              <option value="Hacker">Hacker</option>
+            </select>
+          </div>
+          <br /><br />
+          <div>
+            <div>
+              <label for="pesan">Pesan:</label>
+            </div>
+            <div class="textarea">
+              <textarea
+                placeholder="Tuliskan Pendapatmu"
+                name="pesan"
+                id="pesan"
+                rows="4"
+                cols="50"
+              ></textarea>
+            </div>
+          </div>
+          <br /><br />
+          <div>
+            <!-- action button -->
+            <button type="reset">Reset</button>
+            <button type="submit">Send Feedback</button>
+          </div>
+        </form>
+      </div>
+{% endblock %}
+

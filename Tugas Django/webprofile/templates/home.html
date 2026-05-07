@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Portfolio Siswa{% endblock %}
+{% block page_title %}Portfolio Project Siswa{% endblock %}
+{% block subtitle %}Kumpulan karya digital siswa{% endblock %}
+
+{% block content %}
+  <section class="box">
+    <h3 class="section-title">Daftar Project</h3>
+
+    <div>
+      <h4>Website Profile Santri</h4>
+      <p>Website profile siswa menggunakan Django templating.</p>
+      <a href="{% url 'santri_home' %}">Masuk ke Website</a>
+    </div>
+
+    <hr>
+
+    <div>
+      <h4>Website Slicing</h4>
+      <p>Coming Soon</p>
+    </div>
+  </section>
+{% endblock %}

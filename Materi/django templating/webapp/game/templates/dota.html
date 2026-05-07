@@ -1,0 +1,64 @@
+
+{% extends 'base.html' %}
+<!-- extends = memanggil file template, wajib paling atas -->
+
+{% block title %} Dota 2 - Page {% endblock %}
+
+{% block content %} 
+<h1>🛡️ Pertempuran Ancients 🛡️</h1>
+    <p>Pilih Posisi (Pos) untuk melihat tugas utamamu di Map Dota 2!</p>
+
+    
+
+    <div class="role-container">
+        
+        <div class="role-card" onclick="gantiInfo('⚔️ POS 1: CARRY', 'Fokus utama pada farming gold di Safelane. Ujung tombak kemenangan tim di akhir permainan (Late Game).')">
+            <div class="emoji">⚔️</div>
+            <div class="role-name">Carry</div>
+            <div class="role-pos">Pos 1</div>
+        </div>
+        
+        <div class="role-card" onclick="gantiInfo('🧙‍♂️ POS 2: MIDLANER', 'Bermain solo di jalur tengah untuk mendapat level dengan cepat dan melakukan <b>gank</b> (menyergap) musuh ke jalur lain.')">
+            <div class="emoji">🧙‍♂️</div>
+            <div class="role-name">Midlaner</div>
+            <div class="role-pos">Pos 2</div>
+        </div>
+
+        <div class="role-card" onclick="gantiInfo('🪨 POS 3: OFFLANER', 'Hero tangguh (Initiator/Tank) yang bertugas menahan badan, mengacaukan jalur, dan mengganggu proses farming Carry lawan.')">
+            <div class="emoji">🪨</div>
+            <div class="role-name">Offlaner</div>
+            <div class="role-pos">Pos 3</div>
+        </div>
+
+        <div class="role-card" onclick="gantiInfo('🏃 POS 4: SOFT SUPPORT', 'Sering berkeliling map (Roamer) untuk membantu jalur yang kesulitan, menyergap musuh, dan mengamankan rune/objektif.')">
+            <div class="emoji">🏃</div>
+            <div class="role-name">Soft Support</div>
+            <div class="role-pos">Pos 4</div>
+        </div>
+
+        <div class="role-card" onclick="gantiInfo('👁️ POS 5: HARD SUPPORT', 'Berkorban demi tim! Bertugas melindungi Carry di awal game, membeli item vision (Ward), dan mengamankan pandangan map.')">
+            <div class="emoji">👁️</div>
+            <div class="role-name">Hard Support</div>
+            <div class="role-pos">Pos 5</div>
+        </div>
+
+    </div>
+
+    <div id="info-box">
+        Klik salah satu kartu posisi di atas untuk mengecek detail tugasnya di sini.
+    </div>
+
+    <a href="/game/index/" class="btn-back">⬅️ Kembali ke Nexus Portal</a>
+
+    <script>
+        function gantiInfo(namaPosisi, deskripsiPosisi) {
+            var kotakInfo = document.getElementById('info-box');
+            // Ubah border dan shadow menjadi merah saat diklik
+            kotakInfo.style.borderColor = '#ef4444';
+            kotakInfo.style.boxShadow = "inset 0 0 20px rgba(239, 68, 68, 0.15)";
+            
+            // Masukkan teks HTML baru
+            kotakInfo.innerHTML = "<span class='highlight'>" + namaPosisi + "</span>" + deskripsiPosisi;
+        }
+    </script>
+{% endblock %}

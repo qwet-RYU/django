@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}
+<!-- extends = memanggil file template, wajib paling atas -->
+
+{% block title %} Mobile Legends - Page {% endblock %}
+
+{% block content %} 
+<h1>⚔️ Welcome to Mobile Legends ⚔️</h1>
+        <p>Pilih Role (Peran) Hero yang akan kamu mainkan. Klik pada kartu di bawah ini!</p>
+
+        <div class="role-container">
+            <div class="role-card" onclick="gantiInfo('🥷 ASSASSIN', 'Tugas Utama: Jungler.<br>Fokus farming monster hutan dan sergap hero lawan yang darahnya tipis (Mage/Marksman).')">
+                <div class="emoji">🥷</div>
+                <div class="role-name">Assassin</div>
+            </div>
+            
+            <div class="role-card" onclick="gantiInfo('🏹 MARKSMAN', 'Tugas Utama: Gold Laner.<br>Fokus cari uang (gold) di awal game agar damage seranganmu mematikan di akhir game (Late Game).')">
+                <div class="emoji">🏹</div>
+                <div class="role-name">Marksman</div>
+            </div>
+
+            <div class="role-card" onclick="gantiInfo('🔮 MAGE', 'Tugas Utama: Mid Laner.<br>Kuasai area tengah dan bantu rotasi teman ke atas (Top) atau bawah (Bottom) dengan magic damage area.')">
+                <div class="emoji">🔮</div>
+                <div class="role-name">Mage</div>
+            </div>
+
+            <div class="role-card" onclick="gantiInfo('🛡️ TANK', 'Tugas Utama: Roamer.<br>Lindungi teman satu tim, buka map, dan jadilah tameng (inisiator) saat terjadi pertarungan besar (Team Fight).')">
+                <div class="emoji">🛡️</div>
+                <div class="role-name">Tank</div>
+            </div>
+
+            <div class="role-card" onclick="gantiInfo('⚔️ FIGHTER', 'Tugas Utama: EXP Laner.<br>Bertahanlah di jalur EXP untuk cepat naik level dan hancurkan turret lawan.')">
+                <div class="emoji">⚔️</div>
+                <div class="role-name">Fighter</div>
+            </div>
+        </div>
+
+        <div id="info-box">
+            Silakan klik salah satu role di atas untuk melihat detail tugasnya di sini.
+        </div>
+
+        <script>
+            function gantiInfo(namaRole, deskripsiRole) {
+                // Mencari elemen dengan id 'info-box'
+                var kotakInfo = document.getElementById('info-box');
+                
+                // Mengganti warna border agar terlihat berinteraksi
+                kotakInfo.style.borderColor = '#ffd700';
+                kotakInfo.style.color = '#e6edf3';
+                
+                // Mengisi HTML ke dalam kotak
+                kotakInfo.innerHTML = "<span class='highlight'>" + namaRole + "</span>" + deskripsiRole;
+            }
+        </script>
+{% endblock %}
