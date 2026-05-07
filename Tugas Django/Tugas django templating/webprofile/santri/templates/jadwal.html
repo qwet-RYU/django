@@ -1,0 +1,64 @@
+
+{% extends 'base.html' %}
+<!-- extends = memanggil file template, wajib paling atas -->
+{% load static %}
+{% block title %} Table {% endblock %}
+
+{% block content %} 
+<div class="box">
+    <h1>Jadwal Bulanan</h1>
+    <h3 class="alter_color">Kegiatan Baru</h3>
+    <hr>
+        <h3 class="section-title">JADWAL KEGIATAN BULANAN</h3>
+        <p>Berikut adalah jadwal kegiatan bulanan yang telah direncanakan untuk semester ini.</p>
+    <div class="div-table">
+        <table border="1">
+            <tr>
+                <th colspan="2">Tanggal</th>
+                <th rowspan="2">Bulan</th>
+                <th rowspan="2">Kegiatan</th>
+            </tr>
+            <tr>
+                <th>Mulai</th>
+                <th>Selesai</th>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>30</td>
+                <td>Mei</td>
+                <td>Susur Sungai</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>15</td>
+                <td>Juni</td>
+                <td>Senyum-Tersenyum</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>17</td>
+                <td>Juli</td>
+                <td>Kunjungan Panti Asuhan</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>31</td>
+                <td>Oktober</td>
+                <td>Kunjungan Panti Jompo</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>30</td>
+                <td>November</td>
+                <td>Ujian Semester</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Libur Semester</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+<!-- extends = memanggil file template, wajib paling atas -->
+{% load static %}
+
+{% block title %} RYU Biodata {% endblock %}
+
+{% block content %} 
+<div>
+            <h1>MUHAMMAD RYU NURKHALAM</h1>
+            <h2 class="alter_color">Kelas 10 - Ibnul Qayyim</h2>
+        </div>
+<div class="box">
+            <h3 class="section-title">MY BIODATA</h3>
+            <img class="avatar" src="{% static 'images/foto_diri.jpg' %}" alt="muka saya" width="250px" title="Foto Diri">
+            <p>Hi bro, welocome to my simple biodata page!<br>Tiap malam ana belajar HTML dan PYTHON bareng Kak Andy dan Mentor IT.<br>If you feel struggled, just can count on me</p>
+        </div>
+        <hr>
+        <div class="box">
+            <h4 class="section-title">Hobby</h4>
+            <ul>
+                <li>Main Game</li>
+                <li>Baca Buku</li>
+                <li>Ngoding</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="box">
+            <h4 class="section-title">Cita-cita</h4>
+            <ol type="I"> 
+                <li>Game Dev</li>
+                <li>Modder</li>
+                <li>Animator</li>
+            </ol>
+        </div>
+        <hr>
+        <div class="box">
+            <h4 class="section-title">Kontak</h4>
+            <p>Nomor WA: +62 856-1501-449<br>Telegram: New Ryu ; +62 857 16859243<br>Email: khalamnur3@gmail.com<br>GitHub: <a href="https://github.com/qwet-RYU">qwet-RYU</a><br>YouTube: <a href="UCCmzY9yyQa_aEWeQr0UmHHA">fachri irfran</a></p>
+        </div>
+{% endblock %}
+
